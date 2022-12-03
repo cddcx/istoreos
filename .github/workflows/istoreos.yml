@@ -1,4 +1,4 @@
-name: openwrt-5.4
+name: istoreos
 
 on:
   workflow_dispatch:
