@@ -6,6 +6,11 @@
 #2 修改密码
 sed -i 's/5mjCdAB1$Uk1sNbwoqfHxUmzRIeuZK1:0/SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775/g' package/base-files/files/etc/shadow
 
+##取消bootstrap为默认主题
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
+
 # 修改网络
 #sed -i 's/eth0/eth0 eth2 eth3/' package/base-files/files/etc/board.d/99-default_network
 #sed -i '2i # network config' package/lean/default-settings/files/zzz-default-settings
