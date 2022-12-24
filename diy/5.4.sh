@@ -18,6 +18,7 @@ svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/l
 rm -rf package/luci-app-openclash/.svn
 
 ## 修改include/target.mk
+sed -i 's/dnsmasq/dnsmasq-full/g' include/target.mk
 sed -i 's/kmod-ipt-offload/block-mount coremark kmod-nf-nathelper kmod-nf-nathelper-extra kmod-ipt-raw kmod-tun kmod-ipt-offload/g' include/target.mk
 sed -i 's/ip6tables/ip6tables iptables-mod-tproxy iptables-mod-extra ipset ip-full default-settings luci luci-newapi/g' include/target.mk
 sed -i 's/odhcpd-ipv6only/odhcpd-ipv6only curl ca-certificates/g' include/target.mk
