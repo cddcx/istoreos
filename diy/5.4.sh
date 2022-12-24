@@ -17,6 +17,9 @@
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 rm -rf package/luci-app-openclash/.svn
 
+## luci-theme-argon
+svn co https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+
 ## 修改include/target.mk
 sed -i 's/dnsmasq/dnsmasq-full/g' include/target.mk
 sed -i 's/kmod-ipt-offload/block-mount coremark kmod-nf-nathelper kmod-nf-nathelper-extra kmod-ipt-raw kmod-tun kmod-ipt-offload/g' include/target.mk
