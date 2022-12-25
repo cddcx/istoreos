@@ -19,7 +19,8 @@ svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease pack
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 rm -rf package/luci-app-openclash/.svn
 # luci-theme-argon
-svn co https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/jerrykuku/luci-theme-argon package/luci-theme-argon
+#svn co https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 ## 修改include/target.mk
 sed -i 's/dnsmasq/dnsmasq-full/g' include/target.mk
