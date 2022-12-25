@@ -13,11 +13,12 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
+## 添加源和软件
+svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease package/linkease
 # luci-app-openclash
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 rm -rf package/luci-app-openclash/.svn
-
-## luci-theme-argon
+# luci-theme-argon
 svn co https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 ## 修改include/target.mk
